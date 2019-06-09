@@ -11,27 +11,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-#
-# This file is the build configuration for an aosp Android
-# build for marlin hardware. This cleanly combines a set of
-# device-specific aspects (drivers) with a device-agnostic
-# product configuration (apps). Except for a few implementation
-# details, it only fundamentally contains two inherit-product
-# lines, aosp and du, hence its name.
-#
-
-# Include DU common configuration
-include vendor/du/config/common_full_phone.mk
-
-# Inherit from those products. Most specific first.
+# Inherit AOSP device configuration for crosshatch
 $(call inherit-product, device/google/crosshatch/aosp_crosshatch.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-PRODUCT_NAME := du_crosshatch
+
+
+
+# Override AOSP build properties
+PRODUCT_NAME := abc_crosshatch
 PRODUCT_DEVICE := crosshatch
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel 3 XL

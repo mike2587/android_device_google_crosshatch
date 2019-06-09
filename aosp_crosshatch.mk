@@ -22,20 +22,17 @@ $(call inherit-product, device/google/crosshatch/device-crosshatch.mk)
 $(call inherit-product-if-exists, vendor/google_devices/crosshatch/proprietary/device-vendor.mk)
 
 PRODUCT_PACKAGES += \
-    Dialer \
-    Launcher3QuickStep \
-    WallpaperPicker
+    netutils-wrapper-1.0 \
+    vndk_package
 
-# STOPSHIP deal with Qualcomm stuff later
-# PRODUCT_RESTRICT_VENDOR_FILES := all
+PRODUCT_COPY_FILES += \
+    device/google/crosshatch/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+
+#PRODUCT_RESTRICT_VENDOR_FILES := owner
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Android
 PRODUCT_NAME := aosp_crosshatch
 PRODUCT_DEVICE := crosshatch
 PRODUCT_MODEL := AOSP on crosshatch
-
-# Audio XMLs
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
 

@@ -89,6 +89,8 @@ persist.data.df.dev_name=rmnet_usb0
 persist.data.netmgrd.qos.enable=true
 persist.data.mode=concurrent
 
+ro.skip.fingerprint.check=true
+
 # system props for ims features
 persist.dbg.ims_volte_enable=1
 persist.dbg.volte_avail_ovr=1
