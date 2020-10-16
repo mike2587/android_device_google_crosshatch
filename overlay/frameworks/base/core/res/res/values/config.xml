@@ -422,4 +422,6 @@
 
     <bool name="config_has_elmyra">true</bool>
 
+    <bool name="config_fingerprintSupportsGestures">true</bool>
+
 </resources>
