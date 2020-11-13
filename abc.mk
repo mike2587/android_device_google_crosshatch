@@ -45,5 +45,9 @@ BUILD_FINGERPRINT := "google/crosshatch/crosshatch:11/RQ1A.210105.003/7005429:us
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=google/crosshatch/crosshatch:11/RQ1A.210105.003/7005429:user/release-keys
 
+# Active Edge
+PRODUCT_PACKAGES += \
+    ElmyraService    
+
 $(call inherit-product-if-exists, vendor/google/crosshatch/crosshatch-vendor.mk)
 $(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
